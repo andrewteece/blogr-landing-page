@@ -1,42 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
 
 /* CSS CUSTOM PROPERTIES */
 
 :root {
+  --ff-primary: "Overpass", sans-serif;
+  --ff-secondary: "Ubuntu", sans-serif;
 
-    --ff-primary: 'Overpass', sans-serif;
-    --ff-secondary: 'Ubuntu', sans-serif;
+  --fs-300: 0.9375rem; /* 15px */
+  --fs-400: 1rem; /* 16px */
+  --fs-500: 1.125rem; /* 18px */
+  --fs-600: 1.25rem; /* 20px */
+  --fs-700: 1.75rem; /* 28px */
+  --fs-800: 2.5rem; /* 40px */
+  --fs-900: 4rem; /* 64px */
 
-    --fs-300: .9375rem; /* 15px */
-    --fs-400: 1rem;  /* 16px */
-    --fs-500: 1.125rem; /* 18px */ 
-    --fs-600: 1.25rem; /* 20px */ 
-    --fs-700: 1.75rem; /* 28px */
-    --fs-800: 2.5rem; /* 40px */ 
-    --fs-900: 4rem: /* 64px */
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
 
-    --fw-300: 300;
-    --fw-400: 400;
-    --fw-500: 500;
-    --fw-600: 600;
-    --fw-700: 700;
+  --clr-primary-200: hsl(355, 100%, 74%); /* cta hover bg */
+  --clr-primary-400: hsl(356, 100%, 66%); /* cta text */
+  --clr-primary-600: hsl(208, 49%, 24%); /* headings*/
 
-    --clr-primary-200: hsl(355, 100%, 74%);  /* cta hover bg */
-    --clr-primary-400: hsl(356, 100%, 66%); /* cta text */
-    --clr-primary-600: hsl(208, 49%, 24%); /* headings*/
+  --clr-neutral-100: hsl(0, 0%, 100%); /* text */
+  --clr-neutral-300: hsl(240, 2%, 79%); /* footer text */
+  --clr-neutral-500: hsl(207, 13%, 34%); /* body copy */
+  --clr-neutral-800: hsl(240, 10%, 16%); /* footer bg */
 
-    --clr-neutral-100: hsl(0, 0%, 100%); /* text */
-    --clr-neutral-300: hsl(240, 2%, 79%); /* footer text */
-    --clr-neutral-500: hsl(207, 13%, 34%); /* body copy */
-    --clr-neutral-800: hsl(240, 10%, 16%); /* footer bg */
+  --clr-gradient-300: hsl(13, 100%, 72%); /* intro/cta mobile nav */
+  --clr-gradient-500: hsl(353, 100%, 62%); /* intro/cta mobile nav */
 
-    --clr-gradient-300: hsl(13, 100%, 72%); /* intro/cta mobile nav */
-    --clr-gradient-500: hsl(353, 100%, 62%); /* intro/cta mobile nav */
+  --clr-gradient-700: hsl(237, 23%, 32%); /* body */
+  --clr-gradient-800: hsl(237, 17%, 21%); /* body */
 
-    --clr-gradient-700: hsl(237, 23%, 32%); /* body */
-    --clr-gradient-800: hsl(237, 17%, 21%); /* body */
+  --clr-gradient-bg: linear-gradient(
+    180deg,
+    hsl(13, 100%, 72%) 0%,
+    hsl(353, 100%, 62%) 100%
+  );
+  --clr-gradient-body: linear-gradient(
+    180deg,
+    hsl(237, 23%, 32%) 0%,
+    hsl(237, 17%, 21%) 100%
+  );
+
+  --header-lg: clamp(30px, 13.8461525px + 4.615385vw, 60px);
+  --header-md: clamp(25px, 14.2307695px + 3.076923vw, 45px);
+  --header-sm: clamp(20px, 15.6923085px + 1.230769vw, 28px);
+
+  --space-3xs-2xs: clamp(0.31rem, calc(0.14rem + 0.85vw), 0.75rem);
+  --space-2xs-xs: clamp(0.69rem, calc(0.52rem + 0.85vw), 1.13rem);
+  --space-xs-s: clamp(1rem, calc(0.8rem + 0.98vw), 1.5rem);
+  --space-s-m: clamp(1.31rem, calc(0.95rem + 1.83vw), 2.25rem);
+  --space-m-l: clamp(2rem, calc(1.61rem + 1.95vw), 3rem);
+  --space-l-xl: clamp(2.63rem, calc(1.89rem + 3.66vw), 4.5rem);
+  --space-xl-2xl: clamp(3.94rem, calc(3.13rem + 4.02vw), 6rem);
+  --space-2xl-3xl: clamp(5.25rem, calc(3.79rem + 7.32vw), 9rem);
+  --space-3xl-4xl: clamp(7.88rem, calc(7.44rem + 2.2vw), 9rem);
 }
 
 /* CSS RESET */
@@ -45,37 +69,114 @@
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  * {
-    margin: 0;
-  }
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  input, button, textarea, select {
-    font: inherit;
-  }
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  #root, #__next {
-    isolation: isolate;
-  }
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-400);
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
 
 /* GENERAL/ GLOBAL STYLES */
 
+header {
+  display: grid;
+  place-items: center;
+  gap: var(--space-l-xl);
+  background: var(--clr-gradient-bg);
+  color: var(--clr-neutral-100);
+  padding: var(--space-3xl-4xl) 2rem;
+  text-align: center;
+}
 
+.header__title {
+  font-size: var(--fs-900);
+}
 
+/* UTILITY CLASSES */
 
+.grid--sm {
+  display: grid;
+  place-items: center;
+  gap: var(--space-2xs-xs);
+}
 
+.btn__group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs-xs);
+  font-family: var(--ff-secondary);
+}
+
+.btn {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--clr-neutral-100);
+  border-radius: 2rem;
+  padding: .6rem 1rem;
+  border: 1px solid var(--clr-neutral-100);
+}
+
+.btn--fill {
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-primary-400);
+  border: none;
+}
+
+.btn--fill:hover,
+.btn--fill:focus {
+  background-color: var(--clr-primary-200);
+  color: var(--clr-neutral-100);
+  transition: .5s ease-in-out;
+}
+
+.btn--outline {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+}
+
+.btn--outline:hover,
+.btn--outline:focus {
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-primary-400);
+  transition: .5s ease-in-out;
+
+}
 
 
 
