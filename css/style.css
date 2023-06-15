@@ -135,7 +135,29 @@ header {
 } */
 
 .header__title {
-  font-size: var(--fs-900);
+  font-size: var(--fs-800);
+  line-height: 1.1;
+}
+
+main {
+  display: grid;
+  gap: var(--space-xl-2xl);
+  padding: var(--space-xl-2xl) var(--space-xs-s);
+  color: var(--clr-neutral-500);
+}
+
+/* CONTENT SECTIONS */
+
+[aria-labelledby="main__content"] {
+  display: grid;
+  gap: var(--space-xl-2xl);
+  text-align: center;
+}
+
+.main__content--title {
+  font-size: var(--header-md);
+  color: var(--clr-primary-600);
+  text-align: center;
 }
 
 /* UTILITY CLASSES */
@@ -144,6 +166,12 @@ header {
   display: grid;
   place-items: center;
   gap: var(--space-2xs-xs);
+  text-align: center;
+}
+
+.flex-reverse {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .btn__group {
@@ -186,6 +214,15 @@ header {
   color: var(--clr-primary-400);
   transition: color 450ms ease-in-out;
 
+}
+
+.text__group {
+  display: grid;
+  gap: var(--space-xl-2xl);
+}
+
+.main__svg--mobile {
+ 
 }
 
 
