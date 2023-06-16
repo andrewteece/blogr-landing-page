@@ -83,6 +83,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: var(--ff-primary);
   font-size: var(--fs-400);
+  letter-spacing: .02em;
 }
 img,
 picture,
@@ -111,7 +112,7 @@ h6 {
 h1,
 h2, 
 h3 {
-  line-height: 1.1;
+  line-height: 1.2;
 }
 #root,
 #__next {
@@ -141,8 +142,8 @@ header {
 } */
 
 .header__title {
-  font-size: var(--fs-800);
-  line-height: 1.1;
+  font-size: 2rem;
+  line-height: 1.5;
 }
 
 main {
@@ -211,7 +212,9 @@ main {
 footer {
   background-color: var(--clr-neutral-800);
   border-top-right-radius: 6rem;
-  padding-block: var(--space-3xl-4xl);
+  padding-block: var(--space-2xl-3xl);
+  font-size: var(--fs-500);
+  font-weight: var(--fw-500);
 }
 
 .footer__wrapper {
@@ -239,6 +242,7 @@ footer {
 .nav__link:first-child {
   margin-bottom: 1.5rem;
   color: var(--clr-neutral-100);
+  font-weight: var(--fw-500);
 }
 
 /* UTILITY CLASSES */
@@ -327,6 +331,7 @@ footer {
 .text__group {
   display: grid;
   gap: var(--space-l-xl);
+  font-weight: var(--fw-300);
 }
 
 .text__padding {
