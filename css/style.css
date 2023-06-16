@@ -107,6 +107,12 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
+
+h1,
+h2, 
+h3 {
+  line-height: 1.1;
+}
 #root,
 #__next {
   isolation: isolate;
@@ -155,7 +161,7 @@ main {
 }
 
 .main__content--title {
-  font-size: var(--header-md);
+  font-size: var(--fs-700);
   color: var(--clr-primary-600);
   text-align: center;
 }
@@ -171,6 +177,15 @@ main {
 
 .main__sub--title {
   color: var(--clr-neutral-100);
+  padding-inline: var(--space-xs-s);
+  font-size: var(--fs-800);
+  line-height: 1.5;
+}
+
+.main__content--subtitle,
+.features__title {
+  max-inline-size: 18ch;
+  font-size: var(--fs-700);
 }
 
 .sub__svg--mobile {
@@ -185,6 +200,17 @@ main {
 
 [aria-labelledby="main__sub--content"] .flex-wrap {
   gap: var(--space-s-m);
+}
+
+.features__title {
+  font-size: var(--fs-700);
+  color: var(--clr-primary-600);
+  text-align: center;
+}
+
+.footer {
+  background-color: var(--clr-neutral-800);
+  border-top-right-radius: 6rem;
 }
 
 /* UTILITY CLASSES */
@@ -213,6 +239,15 @@ main {
 .flex-reverse {
   display: flex;
   flex-wrap: wrap;
+}
+
+.flex-child {
+  align-content: center;
+}
+
+.wrapper {
+  max-width: 90rem;
+  margin-inline: auto;
 }
 
 .btn__group {
@@ -262,8 +297,21 @@ main {
   gap: var(--space-l-xl);
 }
 
-.main__svg--mobile {
- 
+.text__padding {
+  padding-inline: var(--space-xs-s);
+  padding-bottom: var(--space-l-xl);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 
