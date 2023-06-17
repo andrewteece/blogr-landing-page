@@ -131,15 +131,17 @@ header {
   text-align: center;
   position: relative;
   border-bottom-left-radius: 6.25rem;
+  z-index: 1;
+  overflow: hidden;
 }
 
-/*.header__bg {
+.header__bg {
   position: absolute;
   z-index: -1;
   transform: scale(4);
-  top: -4rem;
-  right: -4rem;
-} */
+  top: -1rem;
+  right: -1rem;
+} 
 
 .header__title {
   font-size: 2rem;
@@ -174,6 +176,7 @@ main {
   position: relative;
   color: var(--clr-neutral-100);
   padding-bottom: var(--space-2xl-3xl);
+  overflow: hidden;
 }
 
 .main__sub--title {
@@ -197,6 +200,7 @@ main {
   z-index: -2;
   border-bottom-left-radius: 6rem;
   border-top-right-radius: 6rem;
+  overflow: hidden;
 }
 
 [aria-labelledby="main__sub--content"] .flex-wrap {

@@ -14,6 +14,51 @@
     <title>Frontend Mentor | [Blogr]</title>
   </head>
   <body>
+    <nav>
+      <div class="container nav__container">
+        <a href="/index.html">
+          <img src="images/logo.svg" alt="blogr logo">
+        </a>
+        <button class="btn--menu" aria-label="open mobile navigation" aria-expanded="false" aria-controls="menubar">
+          <img src="images/icon-hamburger.svg" alt="hamburger icon">
+        </button>
+        <ul class="nav__links--main" role="menubar" id="menubar">
+          <li role="none">
+            <a href="#" role="menuitem" class="nav__link--main">Product</a>
+            <ul class="nav__sublinks">
+              Overview
+              Pricing
+              Marketplace
+              Features
+              Integrations
+            </ul>
+          </li>
+          <li role="none">
+            <a href="#" role="menuitem" class="nav__link--main">Company</a>
+            <ul class="nav__sublinks">
+              About
+              Team
+              Blog
+              Careers
+            </ul>
+          </li>
+          <li role="none" class="contact__us">
+            <a href="#" role="menuitem" class="nav__link--main">Connect</a>
+            <ul class="nav__sublinks">
+              Contact
+              Newsletter
+              Linkedin
+            </ul>
+          </li>
+          <li role="none">
+            <a href="#" class="btn btn--outline" role="menuitem">Login</a>
+          </li>
+          <li role="none">
+            <a href="#" class="btn btn--fill" role="menuitem">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <header>
       <div class="grid--sm">
         <h1 class="header__title">A modern publishing platform</h1>
